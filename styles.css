@@ -72,10 +72,21 @@ a {
     flex-shrink: 0;
 }
 
-#turn {
-    transition: all 0.9s ease;
-}
+@media (prefers-reduced-motion: no-preference) {
+    .react-symbol {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
 
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
 details {
     cursor: pointer;
 }
@@ -84,6 +95,18 @@ details {
     font-size: 1.2rem;
     margin-block-start: 0.7em;
     margin-block-end: 0.7em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.project-image {
+    width: 65%;
+}
+
+.project-desc p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
